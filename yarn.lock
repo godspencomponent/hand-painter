@@ -3583,6 +3583,11 @@ merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/merge-descriptors/download/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
 
+merge-images@^1.1.0:
+  version "1.2.0"
+  resolved "https://registry.npm.taobao.org/merge-images/download/merge-images-1.2.0.tgz#740117bd655b310fe2046f7c980798ded8d6d4f2"
+  integrity sha1-dAEXvWVbMQ/iBG98mAeY3tjW1PI=
+
 methods@~1.1.2:
   version "1.1.2"
   resolved "http://registry.npm.taobao.org/methods/download/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
@@ -5117,6 +5122,11 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "http://registry.npm.taobao.org/signal-exit/download/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
+signature_pad@^3.0.0-beta.3:
+  version "3.0.0-beta.3"
+  resolved "https://registry.npm.taobao.org/signature_pad/download/signature_pad-3.0.0-beta.3.tgz#04bfc4403a9431edfbddacd9ab704f04dc7721fb"
+  integrity sha1-BL/EQDqUMe373azZq3BPBNx3Ifs=
+
 size-sensor@^0.2.6:
   version "0.2.6"
   resolved "https://registry.npm.taobao.org/size-sensor/download/size-sensor-0.2.6.tgz#6fe43afd570786f097171834002a97fe0b19a3da"
@@ -5775,6 +5785,15 @@ vue-loader@^14.2.3:
     vue-style-loader "^4.0.1"
     vue-template-es2015-compiler "^1.6.0"
 
+vue-signature-pad@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.npm.taobao.org/vue-signature-pad/download/vue-signature-pad-2.0.2.tgz#e051ff5ae53f05065d56ce7cb72302f9b21b2d7a"
+  integrity sha1-4FH/WuU/BQZdVs58tyMC+bIbLXo=
+  dependencies:
+    merge-images "^1.1.0"
+    signature_pad "^3.0.0-beta.3"
+    vue "^2.6.11"
+
 vue-style-loader@^4.0.1, vue-style-loader@^4.1.1:
   version "4.1.1"
   resolved "http://registry.npm.taobao.org/vue-style-loader/download/vue-style-loader-4.1.1.tgz#7c1d051b24f60b1707602b549ed50b4c8111d316"
@@ -5794,7 +5813,7 @@ vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "http://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
 
-vue@^2.5.9:
+vue@^2.5.9, vue@^2.6.11:
   version "2.6.11"
   resolved "https://registry.npm.taobao.org/vue/download/vue-2.6.11.tgz?cache=0&sync_timestamp=1583556397972&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue%2Fdownload%2Fvue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha1-dllNh31LEiNEBuhONSdcbVFBJcU=

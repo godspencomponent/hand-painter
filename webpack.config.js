@@ -79,7 +79,9 @@ let config = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude (val) {
+          return val.includes('node_modules') && !val.includes('node_modules/vue-signature-pad')
+        }
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -169,6 +171,14 @@ if (process.env.NODE_ENV === 'production') {
     entry: {
       index: './src/index.vue',
       editor: './editor/index.vue'
+    },
+    resolve: {
+      alias: {
+        signature_pad: path.resolve(__dirname, 'node_modules/signature_pad/dist/signature_pad.umd.js')
+      }
+    },
+    externals: {
+      'vue': "Vue"
     },
     output: {
       path: path.resolve(__dirname, './dist'),

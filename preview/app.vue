@@ -18,16 +18,11 @@
       </el-menu>
     </div>
     <div class="content">
-      <vue-drag-resize
-        class="componentWrap"
-        v-on:resizing="resize"
-        v-on:dragging="resize"
-        :w="componentSize.width"
-        :h="componentSize.height"
-      >
-        <div class="sizeTip">组件显示区域({{componentSize.width}}*{{componentSize.height}})</div>
-        <com v-bind="componentProps" ref="component"></com>
-      </vue-drag-resize>
+      <div style="width: 960px; height: 720px;">
+        <div class="node" :style="style">
+          <com v-bind="componentProps" ref="component"></com>
+        </div>
+      </div>
       <div class="block editor" :style="editerStyle">
         <div class="title" @click="editerActive=true" @mousedown="mousedown" @mouseup="mouseup">编辑面板</div>
         <div class="node">
@@ -52,6 +47,7 @@
   import Toast from './components/Toast'
   import MessageBox from 'mint-ui/message-box/'
   import 'mint-ui/message-box/style.css'
+  import pkg from '../package.json'
 
   export default {
     components: {Toast, Loading, ImgViewer, example, com, Editor, Attribute},
@@ -122,6 +118,7 @@
     },
     data () {
       return {
+        style: pkg.style,
         // 开发过程的分辨率选项
         sizes: {
           'Mobile S': {
